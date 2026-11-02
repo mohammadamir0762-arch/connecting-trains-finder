@@ -1,0 +1,26 @@
+.venv/
+__pycache__/
+.pytest_cache/
+.DS_Store
+.claude/
+.playwright-mcp/
+
+# Data: only the timetable cache the app needs is committed; scripts/download_data.py fetches the rest.
+data/*
+!data/processed/
+data/processed/*
+!data/processed/timetable.pkl
+
+# Models: the two the app loads, and their test scores.
+models/*
+!models/delay_model.joblib
+!models/waitlist_model.joblib
+!models/metrics.json
+!models/comparison.json
+
+# Coursework and private notes stay out of the public repo.
+report/
+PBL REPORT FORMAT.docx
+HANDOFF.md
+scripts/make_report.py
+scripts/report_figures.py

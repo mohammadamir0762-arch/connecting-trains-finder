@@ -1,0 +1,128 @@
+{
+  "waitlist": {
+    "tickets": 53381,
+    "test_tickets": 13346,
+    "methods": {
+      "logistic": {
+        "label": "Logistic regression",
+        "auc": 0.7634,
+        "brier": 0.0967,
+        "train_seconds": 0.03
+      },
+      "forest": {
+        "label": "Random forest",
+        "auc": 0.769,
+        "brier": 0.0958,
+        "train_seconds": 2.91
+      },
+      "trees": {
+        "label": "Gradient-boosted trees (ours, used)",
+        "auc": 0.7752,
+        "brier": 0.0954,
+        "train_seconds": 1.34
+      },
+      "neural_net": {
+        "label": "Neural network",
+        "auc": 0.7635,
+        "brier": 0.0971,
+        "train_seconds": 0.68
+      },
+      "position_only": {
+        "label": "Waitlist number only",
+        "auc": 0.7484
+      }
+    }
+  },
+  "search_timing": [
+    {
+      "route": "Chennai \u2192 Lucknow",
+      "direct": 0,
+      "connections": 316,
+      "search_seconds": 0.019,
+      "risk_seconds": 0.145
+    },
+    {
+      "route": "Mumbai \u2192 Patna",
+      "direct": 3,
+      "connections": 728,
+      "search_seconds": 0.099,
+      "risk_seconds": 0.115
+    },
+    {
+      "route": "Delhi \u2192 Bengaluru",
+      "direct": 4,
+      "connections": 427,
+      "search_seconds": 0.021,
+      "risk_seconds": 0.112
+    },
+    {
+      "route": "Kolkata \u2192 Jaipur",
+      "direct": 2,
+      "connections": 201,
+      "search_seconds": 0.013,
+      "risk_seconds": 0.093
+    }
+  ],
+  "delay": {
+    "test_halts": 891541,
+    "train_halts": 1500000,
+    "methods": {
+      "history": {
+        "label": "Historical average (train at station)",
+        "log_loss": 1.318,
+        "auc_over_1h_late": 0.8939,
+        "median_abs_error_min": 6.4,
+        "connection_auc": 0.8476,
+        "train_seconds": 3.7,
+        "predict_seconds_per_10k": 0.003
+      },
+      "logistic": {
+        "label": "Logistic regression",
+        "log_loss": 1.4559,
+        "auc_over_1h_late": 0.8893,
+        "median_abs_error_min": 7.4,
+        "connection_auc": 0.8432,
+        "train_seconds": 1106.1,
+        "predict_seconds_per_10k": 0.004
+      },
+      "forest": {
+        "label": "Random forest",
+        "log_loss": 1.3279,
+        "auc_over_1h_late": 0.8959,
+        "median_abs_error_min": 6.6,
+        "connection_auc": 0.8498,
+        "train_seconds": 233.8,
+        "predict_seconds_per_10k": 0.024
+      },
+      "trees": {
+        "label": "Gradient-boosted trees (ours)",
+        "log_loss": 1.3252,
+        "auc_over_1h_late": 0.8984,
+        "median_abs_error_min": 6.7,
+        "connection_auc": 0.8631,
+        "predict_seconds_per_10k": 0.114
+      },
+      "deep": {
+        "label": "Neural network with embeddings (ours)",
+        "log_loss": 1.3219,
+        "auc_over_1h_late": 0.8967,
+        "median_abs_error_min": 6.2,
+        "connection_auc": 0.8764,
+        "predict_seconds_per_10k": 0.011
+      },
+      "trees+deep": {
+        "label": "Average of both (ours, used)",
+        "log_loss": 1.308,
+        "auc_over_1h_late": 0.8991,
+        "median_abs_error_min": 6.4,
+        "connection_auc": 0.8749,
+        "predict_seconds_per_10k": 0.122,
+        "train_seconds": 586
+      },
+      "layover_only": {
+        "label": "Waiting time only",
+        "connection_auc": 0.7274
+      }
+    }
+  }
+}

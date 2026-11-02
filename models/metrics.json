@@ -1,0 +1,174 @@
+{
+  "waitlist": {
+    "tickets": 53381,
+    "confirmed_share": 0.1208,
+    "validation_auc": {
+      "trees": 0.7705,
+      "neural_net": 0.7546
+    },
+    "using": "trees",
+    "test": {
+      "trees": {
+        "auc": 0.7752,
+        "brier": 0.0954
+      },
+      "neural_net": {
+        "auc": 0.7635,
+        "brier": 0.0971
+      }
+    },
+    "test_auc": 0.7752,
+    "test_brier": 0.0954,
+    "calibration": [
+      {
+        "predicted": "0%-5%",
+        "tickets": 4388,
+        "actually_confirmed": 0.012
+      },
+      {
+        "predicted": "5%-10%",
+        "tickets": 2359,
+        "actually_confirmed": 0.078
+      },
+      {
+        "predicted": "10%-20%",
+        "tickets": 3995,
+        "actually_confirmed": 0.16
+      },
+      {
+        "predicted": "20%-100%",
+        "tickets": 2604,
+        "actually_confirmed": 0.282
+      }
+    ]
+  },
+  "delay": {
+    "validation_log_loss": {
+      "trees": 1.3165,
+      "deep": 1.3138,
+      "trees+deep": 1.2997
+    },
+    "using": "trees+deep",
+    "test_halts": {
+      "halts": 891541,
+      "log_loss_no_features": 1.7622,
+      "trees": {
+        "log_loss": 1.3252,
+        "auc_over_1h_late": 0.8984,
+        "median_abs_error_min": 6.7
+      },
+      "deep": {
+        "log_loss": 1.3219,
+        "auc_over_1h_late": 0.8967,
+        "median_abs_error_min": 6.2
+      },
+      "trees+deep": {
+        "log_loss": 1.308,
+        "auc_over_1h_late": 0.8991,
+        "median_abs_error_min": 6.4
+      }
+    },
+    "conditions": {
+      "heavy_rain": {
+        "halts": 50000,
+        "observed_over_1h": 0.148,
+        "observed_over_1h_otherwise": 0.131,
+        "predicted_over_1h": 0.141,
+        "predicted_over_1h_otherwise": 0.132,
+        "what_if_over_1h": 0.15,
+        "what_if_baseline_over_1h": 0.127
+      },
+      "festival": {
+        "halts": 50000,
+        "observed_over_1h": 0.138,
+        "observed_over_1h_otherwise": 0.13,
+        "predicted_over_1h": 0.135,
+        "predicted_over_1h_otherwise": 0.132,
+        "what_if_over_1h": 0.13,
+        "what_if_baseline_over_1h": 0.127
+      },
+      "winter": {
+        "halts": 50000,
+        "observed_over_1h": 0.158,
+        "observed_over_1h_otherwise": 0.125,
+        "predicted_over_1h": 0.163,
+        "predicted_over_1h_otherwise": 0.124,
+        "what_if_over_1h": 0.167,
+        "what_if_baseline_over_1h": 0.127
+      },
+      "festival_bihar_east_up": {
+        "halts": 50000,
+        "observed_over_1h": 0.292,
+        "observed_over_1h_otherwise": 0.241,
+        "predicted_over_1h": 0.266,
+        "predicted_over_1h_otherwise": 0.256,
+        "what_if_over_1h": 0.261,
+        "what_if_baseline_over_1h": 0.251
+      }
+    },
+    "connections": {
+      "pairs": 200000,
+      "days": "2026-10-07 .. 2026-10-19",
+      "missed_share": 0.0341,
+      "auc": 0.8747,
+      "brier": 0.0284,
+      "auc_layover_only": 0.7274,
+      "brier_layover_only": 0.033,
+      "calibration": [
+        {
+          "predicted": "0%-5%",
+          "connections": 143151,
+          "actually_missed": 0.007
+        },
+        {
+          "predicted": "5%-15%",
+          "connections": 42891,
+          "actually_missed": 0.059
+        },
+        {
+          "predicted": "15%-30%",
+          "connections": 12370,
+          "actually_missed": 0.192
+        },
+        {
+          "predicted": "30%-50%",
+          "connections": 1374,
+          "actually_missed": 0.509
+        },
+        {
+          "predicted": "50%-100%",
+          "connections": 214,
+          "actually_missed": 0.93
+        }
+      ],
+      "auc_trees": 0.8631,
+      "auc_deep": 0.8764
+    },
+    "trained_on": {
+      "halts": 3508584,
+      "runs_percent": 30,
+      "from": "2025-02-08",
+      "to": "2026-02-07"
+    },
+    "trained_seconds": 586,
+    "observed_by_season": {
+      "September, before the festivals": {
+        "bihar_east_up": 0.182,
+        "rest_of_india": 0.103
+      },
+      "Festival season (Durga Puja to Chhath, Holi)": {
+        "bihar_east_up": 0.271,
+        "rest_of_india": 0.123
+      },
+      "Late Nov to early Dec (after the festivals, before fog season)": {
+        "bihar_east_up": 0.331,
+        "rest_of_india": 0.138
+      },
+      "Winter fog season": {
+        "bihar_east_up": 0.304,
+        "rest_of_india": 0.159
+      }
+    }
+  },
+  "trained": "2026-10-20"
+}

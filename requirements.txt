@@ -1,0 +1,12 @@
+# Pinned to the versions the saved models in models/ were made with. Needs Python 3.12.
+streamlit==1.65.0
+pandas==3.0.6
+numpy==2.5.4
+pyarrow==25.0.1
+scikit-learn==1.9.1
+scipy==1.18.1
+joblib==1.6.0
+# CPU-only PyTorch on Linux servers: the default Linux build adds ~2 GB of GPU libraries.
+torch @ https://download-r2.pytorch.org/whl/cpu/torch-2.14.1%2Bcpu-cp312-cp312-manylinux_2_28_x86_64.whl#sha256=5a6363570c753812540a05eb82380e329469cbe668643e88111414c12627711f ; sys_platform == "linux" and platform_machine == "x86_64"
+torch==2.14.1 ; sys_platform != "linux" or platform_machine != "x86_64"
+pytest>=8.0
