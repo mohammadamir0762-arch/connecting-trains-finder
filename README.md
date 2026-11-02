@@ -1,6 +1,6 @@
 # Connecting Trains Finder
 
-**Live app: https://connecting-trains-finder.streamlit.app**
+**Live app: https://connecting-trains-finder.vercel.app**
 
 IRCTC only searches direct trains. When there is no good direct train (say
 Chennai → Lucknow), travellers find a two-train route by hand: try Chennai →
